@@ -25,13 +25,21 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
+	.state('app.home', {
+		url: '/home',
+		abstract: false,
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/home.html'
+			}
+		}
+	})
   .state('app.search', {
     url: '/search',
     views: {
