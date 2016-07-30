@@ -40,6 +40,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 			}
 		}
 	})
+
+	.state('app.tunings', {
+		url: '/tunings',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/tunings.html'
+			}
+		}
+	})
+
   .state('app.search', {
     url: '/search',
     views: {
